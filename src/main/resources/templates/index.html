@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理系统</title>
+</head>
+<body>
+<table border="1">
+    <h1>添加学生</h1>
+    <form action="/add" method="post">
+        <table bgcolor="#006400">
+            <tr>
+                <th>名字：</th>
+                <th><input type="text" name="name"></th>
+            </tr>
+            <tr>
+                <th>性别：</th>
+                <th><input type="text" name="gender"></th>
+            </tr>
+            <tr>
+                <th>学号：</th>
+                <th><input type="text" name="ids"></th>
+            </tr>
+            <tr>
+                <th>年龄：</th>
+                <th><input type="text" name="age"></th>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="提交"></th>
+            </tr>
+        </table>
+    </form>
+</table>
+<table border="1">
+    <h1>退学</h1>
+    <form action="/del" method="post">
+        <table bgcolor="red">
+            <tr>
+                <th>请输入学号：</th>
+                <th><input type="text" name="ids"></th>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="提交学号"></th>
+            </tr>
+        </table>
+    </form>
+</table>
+<table border="1">
+    <h1>修改学生信息</h1>
+    <form action="/update" method="post">
+        <table bgcolor="#1e90ff">
+            <tr>
+                <th>请输入要修改的学号：</th>
+                <th><input type="text" name="ids"></th>
+            </tr>
+            <tr>
+                <th>名字：</th>
+                <th><input type="text" name="name"></th>
+            </tr>
+            <tr>
+                <th>性别：</th>
+                <th><input type="text" name="gender"></th>
+            </tr>
+
+            <tr>
+                <th>年龄：</th>
+                <th><input type="text" name="age"></th>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="提交"></th>
+            </tr>
+        </table>
+    </form>
+</table>
+<table border="1" >
+    <h1>查询学生信息</h1>
+    <form action="/query" method="post">
+        <table bgcolor="yellow">
+            <tr>
+                <th>查找学生输入学号(所有学生1)：</th>
+                <th><input type="text" name="ids"></th>
+            </tr>
+            <tr>
+                <th><input type="submit" value="提交"></th>
+            </tr>
+        </table>
+    </form>
+</table>
+
+
+<h3 th:bgcolor="red" th:text="${students}">哈哈哈</h3>
+</body>
+</html>
